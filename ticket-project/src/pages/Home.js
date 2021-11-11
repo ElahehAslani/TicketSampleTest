@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../logo.svg';
+import logo from './../logo.jpeg';
 import './App.css';
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
         <p>
           By following the links below, you can create tickets or view all your tickets.
         </p>
-        <div className="main">
+        <div className="Links">
           <Link
             className="App-link"
             to="/create-ticket"
