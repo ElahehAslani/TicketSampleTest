@@ -26,12 +26,17 @@
 
 .App-link {
   color: #61dafb;
-  padding: 20px
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #61dafb;
+  border-radius: 10px;
 }
 
 .main {
   display: flex;
   flex-direction: row;
+  gap: 10px;
+  margin-top: 50px;
 }
 
 @keyframes App-logo-spin {
