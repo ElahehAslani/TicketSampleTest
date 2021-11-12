@@ -128,7 +128,6 @@
 
 .submit {
   display: flex;
-  align-self: flex-end;
   color: white;
   padding: 10px;
   text-decoration: none;
@@ -142,8 +141,26 @@
   font-size: 14px;
 }
 
+.after-submit {
+  display: flex;
+  align-self: flex-end;
+  color: white;
+  padding: 8px 10px 10px 8px;
+  text-decoration: none;
+  border: 1px solid #e04956;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #e04956;
+  font-size: 13px;
+}
+
 @media (min-width: 426px) {
   .ticket-form {
     width: 450px;
+  }
+
+  .submit {
+    display: flex;
+    align-self: flex-end;
   }
 }
