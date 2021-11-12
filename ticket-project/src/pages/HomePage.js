@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from './../logo.jpeg';
 import './App.css';
 
-function Home() {
+function HomePage() {
   return (
     <div className="App">
       <div className="App-header">
@@ -32,4 +32,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

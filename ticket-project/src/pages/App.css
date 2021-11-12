@@ -52,3 +52,24 @@
     transform: rotate(360deg);
   }
 }
+
+.ticket-page {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 30px;
+  border: 1px solid #e04956;
+  align-items: center;
+  justify-items: center;
+}
+
+.image {
+  width: 150px;
+  height: 100px;
+}
+
+.ticket {
+  margin-top: 100px;
+}

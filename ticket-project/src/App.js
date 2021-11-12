@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Ticket from './pages/Ticket';
-import AllTicket from './pages/AllTickets';
+import HomePage from './pages/HomePage';
+import TicketPage from './pages/TicketPage';
+import AllTicketsPage from './pages/AllTicketsPage';
 
 function App() {
   return (
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/create-ticket" component={Ticket} />
-          <Route exact path="/all-tickets" component={AllTicket} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/create-ticket" component={TicketPage} />
+          <Route exact path="/all-tickets" component={AllTicketsPage} />
         </Switch>
       </Router>
     </>    

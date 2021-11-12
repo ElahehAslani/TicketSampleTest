@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AllTicket() {
+function AllTicketsPage() {
   return (
     <div>
       <span>All Ticket</span>
@@ -8,4 +8,4 @@ function AllTicket() {
   );
 }
 
-export default AllTicket;
+export default AllTicketsPage;
