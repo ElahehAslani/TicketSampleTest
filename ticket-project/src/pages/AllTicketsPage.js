@@ -1,9 +1,10 @@
 import React from 'react';
 
 function AllTicketsPage() {
+
   return (
     <div>
-      <span>All Ticket</span>
+      <span>1</span>
     </div>
   );
 }

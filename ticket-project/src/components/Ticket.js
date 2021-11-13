@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { useEffect } from 'react/cjs/react.development';
 
-function Ticket() {
-    const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty, isValid } } 
+function Ticket() { const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
     = useForm({
         defaultValues: {
           ticketTitle: "",
@@ -11,12 +9,10 @@ function Ticket() {
         }
       }
     );
-
     const onSubmit = data => {
-      console.log("data:",data);
+      localStorage.setItem('Title', JSON.stringify(data.ticketTitle));
+      localStorage.setItem('Message', JSON.stringify(data.ticketMessage));
     };
-
-    console.log("is submitted:", isSubmitSuccessful);
 
     useEffect(() => {
       setTimeout(() => {
