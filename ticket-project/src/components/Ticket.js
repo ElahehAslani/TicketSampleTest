@@ -9,9 +9,19 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
         }
       }
     );
+
+    const newTicket = {
+      'id': new Date().getMilliseconds(),
+      'ticketTitle': localStorage.getItem('Title'),
+      'ticketMessage': localStorage.getItem('Message'),
+      'createTime': new Date().toLocaleTimeString(),
+      'ticketStatus': 'Pending',
+    }
+  
     const onSubmit = data => {
       localStorage.setItem('Title', JSON.stringify(data.ticketTitle));
       localStorage.setItem('Message', JSON.stringify(data.ticketMessage));
+
     };
 
     useEffect(() => {
@@ -20,9 +30,11 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
           reset({ ticketMessage: '', ticketTitle: '' });
         }
      }, 3000)
-     
+
     }, [isSubmitSuccessful, reset]);
-  
+    
+    console.log(newTicket);
+
   return (
     <div className="ticket">
       <form className="ticket-form" onSubmit={handleSubmit(onSubmit)}>
