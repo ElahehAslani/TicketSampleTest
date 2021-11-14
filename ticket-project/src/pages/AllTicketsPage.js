@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { StringParam,  useQueryParam } from 'use-query-params';
 import TicketDetail from '../components/TicketDetail';
 import logo from './../logo.jpeg';
@@ -26,7 +27,15 @@ function AllTicketsPage() {
         );
       })}
       </div>
-      {selectedTicket && alert("Yes")}
+      <div className="Links">
+          <Link
+            className="App-link"
+            to="/"
+            rel="noopener noreferrer"
+          >
+            Back to Home Page
+          </Link>
+        </div>
     </div>
   );
 }
