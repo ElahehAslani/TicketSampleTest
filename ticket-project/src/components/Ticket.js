@@ -17,11 +17,19 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
       'createTime': new Date().toLocaleTimeString(),
       'ticketStatus': 'Pending',
     }
+
+    const [tickets, setTickets] = useState([]);
+    const addTicket = (ticket) => {
+      const newTicketsList = [...tickets];
+      newTicketsList.push(ticket);
+      setTickets(newTicketsList);
+      localStorage.setItem('List', JSON.stringify(newTicketsList));
+    }
   
     const onSubmit = data => {
       localStorage.setItem('Title', JSON.stringify(data.ticketTitle));
       localStorage.setItem('Message', JSON.stringify(data.ticketMessage));
-
+      addTicket(newTicket);
     };
 
     useEffect(() => {
@@ -32,8 +40,6 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
      }, 3000)
 
     }, [isSubmitSuccessful, reset]);
-    
-    console.log(newTicket);
 
   return (
     <div className="ticket">
@@ -62,7 +68,6 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
         {isSubmitSuccessful && <span>Your Ticket Successfully Send.</span>}
       </form>
     </div>
-
   );
 }
 
