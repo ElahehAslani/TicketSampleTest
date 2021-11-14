@@ -1,9 +1,11 @@
 import React from 'react';
+import { StringParam,  useQueryParam } from 'use-query-params';
 import TicketDetail from '../components/TicketDetail';
 import logo from './../logo.jpeg';
 
 function AllTicketsPage() {
   const TicketLists = JSON.parse(localStorage.getItem('List'));
+  const [selectedTicket, setSelectedTicket] = useQueryParam('selectedTicket-f', StringParam);
 
   return (
     <div className="list-page">
@@ -19,10 +21,12 @@ function AllTicketsPage() {
             ticketMessage={ticket.ticketMessage}
             createTime={ticket.createTime}
             ticketStatus={ticket.ticketStatus}
+            onClick={() => setSelectedTicket(ticket.id)}
             />
         );
       })}
       </div>
+      {selectedTicket && alert("Yes")}
     </div>
   );
 }

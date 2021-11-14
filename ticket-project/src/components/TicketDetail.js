@@ -3,7 +3,7 @@ import logo from './../logo.svg';
 
 function TicketDetail(props) {
   return (
-      <div className="ticket-detail" role="button" tabIndex={0}>
+      <div className="ticket-detail" role="button" tabIndex={0} onClick={() => props.onClick()}>
         <img className="cart-logo" src={logo} alt="logo" />
         <span>Ticket ID :{props.id} </span>
         <span>Ticket Title : {props.ticketTitle}</span>
