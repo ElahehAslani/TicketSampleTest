@@ -19,6 +19,7 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
     }
 
     const [tickets, setTickets] = useState([]);
+    
     const addTicket = (ticket) => {
       const newTicketsList = [...tickets];
       newTicketsList.push(ticket);
