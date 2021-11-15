@@ -1,6 +1,6 @@
 import React from 'react';
 import Ticket from '../components/Ticket';
-import logo from '../logo.jpeg';
+import logo from '../assets/logo.jpeg';
 import './App.css';
 
 function TicketPage() {

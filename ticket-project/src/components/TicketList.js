@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link} from 'react-router-dom';
 import { StringParam,  useQueryParam } from 'use-query-params';
 import TicketDetail from './TicketDetail';
-import logo from './../logo.jpeg';
+import logo from '../assets/logo.jpeg';
 
 function TicketLists() {
   const TicketLists = JSON.parse(localStorage.getItem('List'));

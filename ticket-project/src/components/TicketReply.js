@@ -1,6 +1,6 @@
 import React from 'react';
 import { StringParam,  useQueryParam } from 'use-query-params';
-import logo from './../logo.jpeg';
+import logo from '../assets/logo.jpeg';
 
 function TicketReply() {
   const [selectedTicket] = useQueryParam('selectedTicket-f', StringParam);
