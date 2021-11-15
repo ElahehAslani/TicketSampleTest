@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link} from 'react-router-dom';
-import { StringParam,  useQueryParam } from 'use-query-params';
+import { StringParam, useQueryParam } from 'use-query-params';
 import TicketDetail from './TicketDetail';
 import logo from '../assets/logo.jpeg';
 

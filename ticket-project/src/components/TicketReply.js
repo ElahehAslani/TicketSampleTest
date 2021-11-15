@@ -1,5 +1,6 @@
 import React from 'react';
 import { StringParam,  useQueryParam } from 'use-query-params';
+import ReplyForm from './ReplyForm';
 import logo from '../assets/logo.jpeg';
 
 function TicketReply() {
@@ -8,8 +9,9 @@ function TicketReply() {
   return (
     <div className="list-page">
       <img className="image" src={logo} alt="logo" />
-      <h3>You Can See All Replies For Ticket Here!</h3>
-      <span>{selectedTicket}</span>
+      <h3>Replies For Ticket : {selectedTicket}</h3>
+      <h3>Write Your Reply Here!</h3>
+      <ReplyForm />
     </div>
   );
 }
