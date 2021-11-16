@@ -2,9 +2,9 @@
 import React  from 'react';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 import { StringParam,  useQueryParam } from 'use-query-params';
+import Header from './Header';
 import ReplyForm from './ReplyForm';
 import ReplyDetail from './ReplyDetail';
-import logo from '../assets/logo.jpeg';
 import close from '../assets/close.svg';
 
 function TicketReply() {
@@ -15,7 +15,7 @@ function TicketReply() {
 
   return (
     <div className="reply-page">
-      <img className="image" src={logo} alt="logo" />
+      <Header />
       <h3>Replies For Ticket : {selectedTicket}</h3>
       <div className="reply">
         <button className="close-button" onClick={() => (history.push(`${match.path}`))}>
@@ -39,9 +39,9 @@ function TicketReply() {
               })}
             </div>
           }
-          </div>
         </div>
       </div>
+    </div>
   );
 }
 

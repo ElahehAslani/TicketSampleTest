@@ -71,15 +71,6 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
         </button>
         {isSubmitSuccessful && <span className="form-span">Your Ticket Successfully Send.</span>}
       </form>
-      <div className="Links">
-        <Link
-          className="App-link"
-          to="/"
-          rel="noopener noreferrer"
-        >
-          Back to Home Page
-        </Link>
-        </div>
     </div>
   );
 }

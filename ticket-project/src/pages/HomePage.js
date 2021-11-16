@@ -15,14 +15,12 @@ function HomePage() {
           <Link
             className="App-link"
             to="/create-ticket"
-            rel="noopener noreferrer"
           >
             Create Ticket
           </Link>
           <Link
             className="App-link"
             to="/all-tickets"
-            rel="noopener noreferrer"
           >
             See All Tickets
           </Link>

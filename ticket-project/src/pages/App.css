@@ -38,6 +38,21 @@
   color: white;
 }
 
+.header-link {
+  color: rgb(41, 32, 32);
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #e04956;
+  border-radius: 10px;
+  display: flex;
+  height: auto;
+}
+
+.header-links :hover {
+  background-color: #e04956;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -307,6 +322,14 @@
 
 .form-span {
   margin-top: 10px;
+}
+
+.header {
+  display: flex;
+  width: 95%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  justify-items: center;
 }
 
 @media (min-width: 426px) {
