@@ -51,7 +51,7 @@ const ReplyForm = () => {const { register, handleSubmit, reset, formState: { err
           {errors.replyText && "Please Write your Reply."}
         </div>
         <button disabled={ !isDirty } className="submit-reply" type="submit" value="Send Reply">
-          {isSubmitSuccessful ? "Thank Yot!" : "Send Reply"}
+          {isSubmitSuccessful ? "Thank You!" : "Send Reply"}
         </button>
       </form>
     </div>

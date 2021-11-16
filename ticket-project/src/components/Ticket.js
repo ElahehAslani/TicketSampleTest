@@ -66,7 +66,7 @@ const Ticket = () => { const { register, handleSubmit, reset, formState: { error
           {errors.ticketMessage && "Please Write your Message."}
         </div>
         <button disabled={ !isDirty } className="submit" type="submit" value="Send Ticket">
-          {isSubmitSuccessful ? "Thank Yot!" : "Send Ticket"}
+          {isSubmitSuccessful ? "Thank You!" : "Send Ticket"}
         </button>
         {isSubmitSuccessful && <span className="form-span">Your Ticket Successfully Send.</span>}
       </form>
