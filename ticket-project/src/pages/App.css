@@ -190,6 +190,11 @@
   justify-items: center;
 }
 
+.reply-part {
+  display: flex;
+  flex-direction: row;
+}
+
 @media (min-width: 426px) {
   .ticket-form {
     width: 450px;

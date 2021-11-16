@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { StringParam, useQueryParam } from 'use-query-params';
+import React, { useState, useEffect, useCallback } from 'react';
+import { StringParam, useQueryParam, BooleanParam, withDefault } from 'use-query-params';
 import { useForm } from 'react-hook-form';
 
 function ReplyForm() {const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
@@ -9,20 +9,23 @@ function ReplyForm() {const { register, handleSubmit, reset, formState: { errors
     }
   }
 );
-  const [selectedTicket] = useQueryParam('selectedTicket-f', StringParam);
+
+  const [selectedTicket] = useQueryParam('selectedTicket-f', StringParam); 
   const newReply = {
-    'id': selectedTicket,
-    'replyText': localStorage.getItem('Reply'),
+   'id': selectedTicket,
+   'replyText': localStorage.getItem('Reply'),
   }
 
-  const [replys, setReply] = useState([]);
+  const [replies, setReply] = useState([]);
+  const [isNewReply, setNewReply] = useQueryParam('new-reply-f',withDefault(BooleanParam, false));
 
-  const addReply = (reply) => {
-    const newReplyList = [...replys];
+  const addReply = useCallback((reply) => {
+    const newReplyList = [...replies];
     newReplyList.push(reply);
     setReply(newReplyList);
+    setNewReply(!isNewReply);
     localStorage.setItem('Replies', JSON.stringify(newReplyList));
-  }
+  }, [replies,isNewReply, setNewReply]);
 
   const onSubmit = data => {
     localStorage.setItem('Reply', JSON.stringify(data.ticketReply));
@@ -34,9 +37,9 @@ function ReplyForm() {const { register, handleSubmit, reset, formState: { errors
       if (isSubmitSuccessful) {
         reset({ ticketReply: '' });
       }
-   }, 3000)
+   }, 1000)
 
-  }, [isSubmitSuccessful, reset]);
+  }, [isSubmitSuccessful,selectedTicket ,addReply, reset]);
 
   return (
     <div className="ticket">
