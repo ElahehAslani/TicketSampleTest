@@ -5,21 +5,21 @@ import './App.css';
 
 function HomePage() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+    <div className="app container">
+      <div className="app-header">
+        <img src={logo} className="app-logo" alt="logo" />
+        <span className="main-span">
           By following the links below, you can create tickets or view all your tickets.
-        </p>
-        <div className="Links">
+        </span>
+        <div className="links">
           <Link
-            className="App-link"
+            className="app-link"
             to="/create-ticket"
           >
             Create Ticket
           </Link>
           <Link
-            className="App-link"
+            className="app-link"
             to="/all-tickets"
           >
             See All Tickets

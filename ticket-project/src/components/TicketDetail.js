@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
 
-function TicketDetail(props) {
+const TicketDetail = (props) => {
   return (
       <div className="ticket-detail" role="button" tabIndex={0} onClick={() => props.onClick()}>
         <img className="cart-logo" src={logo} alt="logo" />

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { StringParam, useQueryParam, BooleanParam, withDefault } from 'use-query-params';
 import { useForm } from 'react-hook-form';
 
-function ReplyForm() {const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
+const ReplyForm = () => {const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
 = useForm({
     defaultValues: {
       replyText: ""

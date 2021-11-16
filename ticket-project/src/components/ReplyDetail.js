@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ReplyDetail(props) {
+const ReplyDetail =(props) => {
   return (
       <div className="reply-detail">
         <span>Ticket ID : {props.id} </span>

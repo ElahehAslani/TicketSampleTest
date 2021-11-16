@@ -7,14 +7,14 @@ import ReplyForm from './ReplyForm';
 import ReplyDetail from './ReplyDetail';
 import close from '../assets/close.svg';
 
-function TicketReply() {
+const TicketReply = () => {
   const ReplyLists = JSON.parse(localStorage.getItem('Replies'));
   const [selectedTicket] = useQueryParam('selectedTicket-f', StringParam);
   const history = useHistory();
   const match = useRouteMatch();
 
   return (
-    <div className="reply-page">
+    <div className="reply-page container">
       <Header />
       <h3>Replies For Ticket : {selectedTicket}</h3>
       <div className="reply">
@@ -22,10 +22,9 @@ function TicketReply() {
           <img className="close-icon" src={close} alt="close" />
         </button>
         <div className="reply-part">
-        <ReplyForm />
+          <ReplyForm />
           {ReplyLists !== null &&
             <div className="replies">
-              {}
               {ReplyLists.map((reply, index) => {
                 if(reply.id === selectedTicket) {
                   return(

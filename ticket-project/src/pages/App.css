@@ -1,24 +1,24 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
+.app-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
+.app-header {
   background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(6px + 2vmin);
   color: rgb(41, 32, 32);
 }
 
-.App-link {
+.app-link {
   color: rgb(41, 32, 32);
   padding: 10px;
   text-decoration: none;
@@ -26,14 +26,21 @@
   border-radius: 10px;
 }
 
-.Links {
+.main-span {
+  width: 95%;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.links {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin-top: 15px;
 }
 
-.Links :hover {
+.links :hover {
   background-color: #e04956;
   color: white;
 }
@@ -65,7 +72,6 @@
 .ticket-page {
   display: flex;
   flex-direction: column;
-  width: 75%;
   margin: auto;
   padding: 10px;
   align-items: center;
@@ -212,6 +218,7 @@
   justify-content: center;
   justify-items: center;
   margin: 10px;
+  width: 100%;
 }
 
 .reply {
@@ -330,6 +337,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   justify-items: center;
+  align-items: center;
 }
 
 @media (min-width: 426px) {
@@ -383,4 +391,11 @@
     width: 400px;
     align-self: flex-start;
   }
+}
+
+@media (min-width: 1024px) {
+   .container {
+     max-width: 1024px;
+     margin: auto;
+   }
 }

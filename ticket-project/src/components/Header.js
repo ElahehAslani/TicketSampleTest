@@ -2,7 +2,7 @@ import React from 'react';
 import { Link} from 'react-router-dom';
 import logo from '../assets/logo.jpeg';
 
-function Header() {
+const  Header = () => {
   return (
     <div className="header">
         <img className="image" src={logo} alt="logo" />

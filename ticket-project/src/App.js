@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage';
 import TicketPage from './pages/TicketPage';
 import AllTicketsPage from './pages/AllTicketsPage';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <QueryParamProvider ReactRouterRoute={Route}>

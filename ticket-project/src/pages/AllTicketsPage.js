@@ -8,7 +8,7 @@ function AllTicketsPage() {
   const [selectedTicket] = useQueryParam('selectedTicket-f', StringParam);
 
   return (
-    <div className="ticket-page">
+    <div className="ticket-page container">
       {selectedTicket ? <TicketReply /> : <TicketList />}
     </div>
   );

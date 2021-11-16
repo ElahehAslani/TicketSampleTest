@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { Link} from 'react-router-dom';
 import Header from './Header';
 import { StringParam, useQueryParam } from 'use-query-params';
 import TicketDetail from './TicketDetail';
 
-function TicketLists() {
+const TicketLists = () => {
   const TicketLists = JSON.parse(localStorage.getItem('List'));
   const [selectedTicket, setSelectedTicket] = useQueryParam('selectedTicket-f', StringParam);
 
@@ -14,7 +13,7 @@ function TicketLists() {
     }
   }, [selectedTicket]);
   return (
-    <div className="list-page">
+    <div className="list-page container">
       <Header />
       <h3>You Can See All Tickets Here!</h3>
       {TicketLists !== null &&   <div  className="lists">

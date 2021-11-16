@@ -5,7 +5,7 @@ import './App.css';
 
 function TicketPage() {
   return (
-    <div className="ticket-page">
+    <div className="ticket-page container">
       <Header/>      
       <h3>Create Your Ticket! </h3>
       <Ticket />

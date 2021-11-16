@@ -1,9 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-function Ticket() { const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
+const Ticket = () => { const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
     = useForm(
       {
         defaultValues: {
