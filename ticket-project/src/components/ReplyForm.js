@@ -42,11 +42,11 @@ function ReplyForm() {const { register, handleSubmit, reset, formState: { errors
   }, [isSubmitSuccessful,selectedTicket ,addReply, reset]);
 
   return (
-    <div className="ticket">
-      <form className="ticket-form" onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="TicketMessage" className="ticket-span">Ticket Reply:</label>
+    <div className="reply-section">
+      <form className="reply-form" onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor="ReplyMessage" className="ticket-span">New Reply :</label>
         <textarea 
-          className="ticket-message" placeholder="enter your reply..." 
+          className="reply-message" placeholder="enter your reply..." 
           {...register("ticketReply", { required: true })} 
         />
         <div className="ticket-error">

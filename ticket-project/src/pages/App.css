@@ -190,9 +190,112 @@
   justify-items: center;
 }
 
+.reply-page {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 10px;
+}
+
+.reply {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid #e04956;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.reply-section {
+  padding: 10px;
+}
+
+.close-icon {
+  display: flex;
+  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+}
+
 .reply-part {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+
+.replies {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center;
+  justify-items: center; */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.reply-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 95%;
+  border: 1px solid #b9b5b5;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.reply-message {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  padding-top: 15px;
+  border: 1px solid #b9b5b5;
+  font-size: 18px;
+  resize: none;
+  outline: none;
+}
+
+.first-reply {
+  display: flex;
+  width: 65%;
+  height: 60px;
+  border: 1px solid #b9b5b5;
+  background-color: #ebe5e5;
+  border-radius: 4px;
+  margin-top: 48px;
+  margin-bottom: 10px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.close-button {
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: white;
+  align-self: flex-end;
 }
 
 @media (min-width: 426px) {
@@ -207,5 +310,38 @@
 
   .lists {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reply-page {
+    margin: 0;
+  }
+
+  .reply {
+    margin-top: 40px;
+  }
+
+  .close-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .reply-part {
+    margin-bottom: 40px;
+    flex-direction: row;
+  }
+
+  .replies {
+    width: 80%;
+    margin-top: 48px;
+    margin-left: 30px;
+  }
+
+  .reply-section {
+    width: 65%;
+  }
+
+  .close-button {
+    width: 35px;
+    height: 35px;
   }
 }
