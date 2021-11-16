@@ -22,7 +22,7 @@ function TicketReply() {
         </button>
         <div className="reply-part">
         <ReplyForm />
-          {ReplyLists !== null ?
+          {ReplyLists !== null &&
             <div className="replies">
               {ReplyLists.map((reply, index) => {
                 return(
@@ -34,10 +34,7 @@ function TicketReply() {
                 );
               })}
             </div>
-          : 
-          <div className="first-reply">
-            <h3>Please Write First Reply!</h3>
-          </div>}
+          }
           </div>
         </div>
       </div>

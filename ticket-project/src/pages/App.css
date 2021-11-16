@@ -231,7 +231,6 @@
 .reply-part {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-content: center;
   justify-items: center;
   margin-bottom: 10px;
@@ -240,9 +239,6 @@
 .replies {
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-content: center;
-  justify-items: center; */
   width: 100%;
   margin-top: 10px;
 }
@@ -298,14 +294,25 @@
   align-self: flex-end;
 }
 
+.submit-reply {
+  display: flex;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid #e04956;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #e04956;
+}
+
 @media (min-width: 426px) {
   .ticket-form {
     width: 450px;
   }
 
-  .submit {
+  .submit-reply {
     display: flex;
-    align-self: flex-end;
+    align-self: flex-start;
   }
 
   .lists {
@@ -343,5 +350,10 @@
   .close-button {
     width: 35px;
     height: 35px;
+  }
+
+  .reply-message {
+    width: 400px;
+    align-self: flex-start;
   }
 }

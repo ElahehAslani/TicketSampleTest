@@ -29,30 +29,28 @@ function ReplyForm() {const { register, handleSubmit, reset, formState: { errors
 
   const onSubmit = data => {
     localStorage.setItem('Reply', JSON.stringify(data.ticketReply));
-    addReply(newReply);
+    // addReply(newReply);
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      if (isSubmitSuccessful) {
-        reset({ ticketReply: '' });
-      }
-   }, 1000)
-
-  }, [isSubmitSuccessful,selectedTicket ,addReply, reset]);
+    if (isSubmitSuccessful) {
+      addReply(newReply)
+      reset({ ticketReply: '' });
+    }
+  }, [isSubmitSuccessful,selectedTicket,newReply ,addReply, reset]);
 
   return (
     <div className="reply-section">
       <form className="reply-form" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="ReplyMessage" className="ticket-span">New Reply :</label>
-        <textarea 
+        <textarea
           className="reply-message" placeholder="enter your reply..." 
           {...register("ticketReply", { required: true })} 
         />
         <div className="ticket-error">
           {errors.replyText && "Please Write your Reply."}
         </div>
-        <button disabled={ !isDirty } className="submit" type="submit" value="Send Reply">
+        <button disabled={ !isDirty } className="submit-reply" type="submit" value="Send Reply">
           {isSubmitSuccessful ? "Thank Yot!" : "Send Reply"}
         </button>
         {isSubmitSuccessful && <span>Your Reply Successfully Send.</span>}

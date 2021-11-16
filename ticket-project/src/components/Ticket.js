@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 
 function Ticket() { const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
@@ -31,17 +31,18 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
     const onSubmit = data => {
       localStorage.setItem('Title', JSON.stringify(data.ticketTitle));
       localStorage.setItem('Message', JSON.stringify(data.ticketMessage));
-      addTicket(newTicket);
+      // addTicket(newTicket);
     };
 
     useEffect(() => {
       setTimeout(() => {
         if (isSubmitSuccessful) {
+          addTicket(newTicket);
           reset({ ticketMessage: '', ticketTitle: '' });
         }
      }, 3000)
 
-    }, [isSubmitSuccessful,addTicket, reset]);
+    }, [isSubmitSuccessful,newTicket ,addTicket, reset]);
 
   return (
     <div className="ticket">
