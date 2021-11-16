@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useCallback } from 'react';
+import { Link} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 function Ticket() { const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful, isDirty } } 
@@ -32,7 +33,6 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
     const onSubmit = data => {
       localStorage.setItem('Title', JSON.stringify(data.ticketTitle));
       localStorage.setItem('Message', JSON.stringify(data.ticketMessage));
-      // addTicket(newTicket);
     };
 
     useEffect(() => {
@@ -69,8 +69,17 @@ function Ticket() { const { register, handleSubmit, reset, formState: { errors, 
         <button disabled={ !isDirty } className="submit" type="submit" value="Send Ticket">
           {isSubmitSuccessful ? "Thank Yot!" : "Send Ticket"}
         </button>
-        {isSubmitSuccessful && <span>Your Ticket Successfully Send.</span>}
+        {isSubmitSuccessful && <span className="form-span">Your Ticket Successfully Send.</span>}
       </form>
+      <div className="Links">
+        <Link
+          className="App-link"
+          to="/"
+          rel="noopener noreferrer"
+        >
+          Back to Home Page
+        </Link>
+        </div>
     </div>
   );
 }

@@ -53,7 +53,6 @@ function ReplyForm() {const { register, handleSubmit, reset, formState: { errors
         <button disabled={ !isDirty } className="submit-reply" type="submit" value="Send Reply">
           {isSubmitSuccessful ? "Thank Yot!" : "Send Reply"}
         </button>
-        {isSubmitSuccessful && <span>Your Reply Successfully Send.</span>}
       </form>
     </div>
   );

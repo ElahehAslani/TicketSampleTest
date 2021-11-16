@@ -305,6 +305,10 @@
   background-color: #e04956;
 }
 
+.form-span {
+  margin-top: 10px;
+}
+
 @media (min-width: 426px) {
   .ticket-form {
     width: 450px;
