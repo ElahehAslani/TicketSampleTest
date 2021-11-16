@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useCallback } from 'react';
 import { StringParam, useQueryParam, BooleanParam, withDefault } from 'use-query-params';
 import { useForm } from 'react-hook-form';
@@ -29,7 +30,6 @@ function ReplyForm() {const { register, handleSubmit, reset, formState: { errors
 
   const onSubmit = data => {
     localStorage.setItem('Reply', JSON.stringify(data.ticketReply));
-    // addReply(newReply);
   };
 
   useEffect(() => {

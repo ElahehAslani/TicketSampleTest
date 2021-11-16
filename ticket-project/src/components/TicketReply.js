@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React  from 'react';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 import { StringParam,  useQueryParam } from 'use-query-params';
@@ -24,14 +25,17 @@ function TicketReply() {
         <ReplyForm />
           {ReplyLists !== null &&
             <div className="replies">
+              {}
               {ReplyLists.map((reply, index) => {
-                return(
-                  <ReplyDetail 
-                    key={index}
-                    id={reply.id} 
-                    replyText={reply.replyText}
-                  />
-                );
+                if(reply.id === selectedTicket) {
+                  return(
+                    <ReplyDetail 
+                      key={index}
+                      id={reply.id} 
+                      replyText={reply.replyText}
+                    />
+                  );
+                } 
               })}
             </div>
           }
