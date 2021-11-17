@@ -1,12 +1,20 @@
 # library and versions:
  "query-string": "^7.0.1",
+ 
  "react": "^17.0.2",
+ 
  "react-dom": "^17.0.2",
+ 
  "react-hook-form": "^7.19.5",
+ 
  "react-router": "^6.0.2",
+ 
  "react-router-dom": "^5.3.0",
+ 
  "react-scripts": "4.0.3",
+ 
  "use-query-params": "^1.1.6"
+ 
 
 In the project directory, you can run:
 
